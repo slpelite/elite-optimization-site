@@ -237,7 +237,7 @@
   }
   .extras-head h3{ font-size:1.1rem; white-space:nowrap; }
   .extras-head::after{ content:""; flex:1; height:1px; background: var(--line); }
-  .journey.extras{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .journey.extras{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
   @media (max-width: 880px){ .journey.extras{ grid-template-columns: 1fr; } }
   .file .cardlink{ color: var(--stamp-ink); font-weight:600; text-decoration:none;
     border-bottom:1px solid currentColor; }
@@ -450,15 +450,31 @@
 
       <div class="extras-head"><h3>Additional Services</h3></div>
       <div class="journey extras">
+        <article class="file" data-step="Start Here">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"/>
+            <path d="M15 2v5h5"/>
+            <circle cx="11" cy="14" r="3"/>
+            <path d="m13.2 16.2 2.3 2.3"/>
+          </svg>
+          <h3>Books Review</h3>
+          <p class="price num">$150 one-time</p>
+          <p>A look at where your books stand today, and a written findings list &mdash; what's
+            miscategorized, what has never been reconciled, whether you're paying for a QuickBooks
+            plan you don't need, and what it would take to put right. The easiest place to start,
+            with no commitment to go further.</p>
+        </article>
         <article class="file" data-step="Add-On">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
             <rect x="5" y="3" width="14" height="18" rx="2"/>
             <path d="M8 7h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15v3"/>
           </svg>
           <h3>Bookkeeping</h3>
-          <p class="price num">from $99/month</p>
-          <p>Ongoing monthly bookkeeping in QuickBooks, so your books stay current and your records
-            are tax-ready all year &mdash; not rebuilt every spring.</p>
+          <p class="price num">$225/month</p>
+          <p>Ongoing monthly bookkeeping for solo businesses &mdash; your QuickBooks subscription
+            included, one bill from me. Weekly monitoring, monthly reconciliation, and statements you
+            can actually read, so your books stay tax-ready all year instead of being rebuilt every
+            spring. One-time setup $450.</p>
         </article>
         <article class="file" data-step="Add-On">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
@@ -506,6 +522,14 @@
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="addon">
+        <strong>Monthly bookkeeping:</strong> $225/month for a solo business &mdash; up to 75
+        transactions a month, one or two accounts, no inventory or payroll, with your QuickBooks
+        Simple Start subscription included in the price. One-time setup is $450, and a $150 Books
+        Review is the easiest way to start. Larger or more complex books &mdash; inventory, projects,
+        heavier invoicing &mdash; are quoted individually; get in touch and I'll price your situation
+        directly.
       </div>
       <div class="addon">
         <strong>Document delivery:</strong> Flexible options available, including secure electronic
@@ -613,6 +637,7 @@
               <option>Go Paperless</option>
               <option>Tax-Ready Package</option>
               <option>Tax Preparation</option>
+              <option>Books Review</option>
               <option>Bookkeeping</option>
               <option>Automation</option>
               <option>All of the above</option>
