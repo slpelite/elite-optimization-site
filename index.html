@@ -242,6 +242,21 @@
   .file .cardlink{ color: var(--stamp-ink); font-weight:600; text-decoration:none;
     border-bottom:1px solid currentColor; }
 
+  /* ---------- Contact: booking block ---------- */
+  .booking-block{
+    display:flex; flex-direction:column; align-items:flex-start; gap:0.55rem;
+    padding-bottom:1.3rem; margin-bottom:1.4rem;
+    border-bottom:1px solid var(--line);
+  }
+  .booking-block h3{ font-size:1.08rem; }
+  .booking-block .btn{ margin-top:0.35rem; }
+  .request-block{
+    display:flex; flex-direction:column; align-items:flex-start; gap:0.55rem;
+  }
+  .request-block h3{ font-size:1.08rem; }
+  .request-block .btn{ margin-top:0.35rem; }
+  .form-sub{ font-size:1.08rem; margin-bottom:0.85rem; }
+
   /* ---------- Tax-Ready ledger table ---------- */
   .ledger{
     width:100%; border-collapse: collapse; margin-top:0.4rem;
@@ -488,7 +503,8 @@
           <h3>Automation</h3>
           <p class="price num">Custom quote</p>
           <p>Repetitive admin and document tasks automated around the way your business already runs.
-            Start with a free <a class="cardlink" href="#contact">15-minute discovery call</a>.</p>
+            Start with a free <a class="cardlink" href="https://outlook.office.com/bookwithme/user/4984d7b4cd32426f9159dd47daa1a314@eliteoptimization.net/meetingtype/PqFplL1yjU-Ka7-3FzlFwA2?anonymous&amp;ismsaljsauthenabled&amp;ep=mcard" target="_blank" rel="noopener">15-minute
+            discovery call</a>.</p>
         </article>
       </div>
     </div>
@@ -608,58 +624,29 @@
       <div class="intake-side">
         <p class="eyebrow">Contact</p>
         <h2>Let's Get Started</h2>
-        <p>Tell me about your paperwork, bookkeeping, taxes or automation needs, and I'll help identify the right
-          solution. I'll follow up to schedule a free 15-minute discovery call &mdash; no obligation,
-          no pressure.</p>
+        <p>Two ways to start. Book a free 15-minute discovery call and pick a time that works for you,
+          or send a request and I'll come back to you within one business day. Either way there's no
+          obligation and no pressure &mdash; we'll work out whether I'm the right fit for what you need.</p>
         <div class="contact-line">
           <a href="mailto:sheripalmer@eliteoptimization.net">sheripalmer@eliteoptimization.net</a>
           <span style="color:var(--ink-faint)">Greater Phoenix, AZ &middot; remote &amp; in-person</span>
         </div>
       </div>
 
-      <form class="card" id="intake-form">
-        <div class="row2">
-          <div class="field">
-            <label for="name">Name <span class="req">*</span></label>
-            <input id="name" name="name" type="text" required autocomplete="name">
-          </div>
-          <div class="field">
-            <label for="email">Email <span class="req">*</span></label>
-            <input id="email" name="email" type="email" required autocomplete="email">
-          </div>
+      <div class="card">
+        <div class="booking-block">
+          <h3>Book a 15-minute discovery call</h3>
+          <p class="form-note">Pick a time that suits you. Fifteen minutes, no charge, and you'll leave
+            knowing what the work would involve and what it would cost.</p>
+          <a class="btn" href="https://outlook.office.com/bookwithme/user/4984d7b4cd32426f9159dd47daa1a314@eliteoptimization.net/meetingtype/PqFplL1yjU-Ka7-3FzlFwA2?anonymous&amp;ismsaljsauthenabled&amp;ep=mcard" target="_blank" rel="noopener">Book a Call</a>
         </div>
-        <div class="row2">
-          <div class="field">
-            <label for="phone">Phone (optional)</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="service">I'm interested in</label>
-            <select id="service" name="service">
-              <option>Go Paperless</option>
-              <option>Tax-Ready Package</option>
-              <option>Tax Preparation</option>
-              <option>Books Review</option>
-              <option>Bookkeeping</option>
-              <option>Automation</option>
-              <option>All of the above</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
+        <div class="request-block">
+          <h3>Or send a request</h3>
+          <p class="form-note">Tell me what you're looking for and I'll reply within one business day.
+            It takes about a minute &mdash; your name, your email, and what you need help with.</p>
+          <a class="btn" href="https://forms.cloud.microsoft/r/N3LWR0HgaY" target="_blank" rel="noopener">Send a Request</a>
         </div>
-        <div class="field">
-          <label for="message">What can I help with?</label>
-          <textarea id="message" name="message" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn">Send Request</button>
-        <p class="form-note">Opens an email to Sheri with your details filled in &mdash; nothing is sent
-          until you press send in your own email app.</p>
-        <div class="confirm" id="confirm">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 6 6L20 6"/></svg>
-          <span>Your email app should now be open with your request ready to send. If nothing opened, email
-            <a href="mailto:sheripalmer@eliteoptimization.net">sheripalmer@eliteoptimization.net</a> directly.</span>
-        </div>
-      </form>
+      </div>
     </div>
   </section>
 </main>
@@ -671,36 +658,6 @@
   </div>
 </footer>
 
-<script>
-  (function(){
-    var form = document.getElementById('intake-form');
-    var confirm = document.getElementById('confirm');
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      var name = form.name.value.trim();
-      var email = form.email.value.trim();
-      var phone = form.phone.value.trim();
-      var service = form.service.value;
-      var message = form.message.value.trim();
 
-      var subject = 'Request for information — ' + service;
-      var bodyLines = [
-        'Name: ' + name,
-        'Email: ' + email,
-        phone ? 'Phone: ' + phone : null,
-        'Interested in: ' + service,
-        '',
-        message || '(no additional message)'
-      ].filter(Boolean);
-
-      var mailto = 'mailto:sheripalmer@eliteoptimization.net'
-        + '?subject=' + encodeURIComponent(subject)
-        + '&body=' + encodeURIComponent(bodyLines.join('\n'));
-
-      window.location.href = mailto;
-      confirm.classList.add('show');
-    });
-  })();
-</script>
 </body>
 </html>
