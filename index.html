@@ -17,9 +17,9 @@
     --paper-raised: #f1f4f9;
     --ink: #23262a;
     --ink-soft: #565b60;
-    --ink-faint: #8b9096;
+    --ink-faint: #6b7075;
     --line: #dde3ec;
-    --stamp: #247AB3;
+    --stamp: #2172A8;
     --stamp-ink: #0E5584;
     --stamp-wash: #e6f1f9;
     --tab-1: #c96a3e;
@@ -36,7 +36,7 @@
       --paper-raised: #1d2023;
       --ink: #ece7db;
       --ink-soft: #b3ada0;
-      --ink-faint: #7d786e;
+      --ink-faint: #9a958b;
       --line: #35322a;
       --stamp: #4AA1DC;
       --stamp-ink: #8CC6EE;
@@ -53,7 +53,7 @@
     --paper-raised: #1d2023;
     --ink: #ece7db;
     --ink-soft: #b3ada0;
-    --ink-faint: #7d786e;
+    --ink-faint: #9a958b;
     --line: #35322a;
     --stamp: #4AA1DC;
     --stamp-ink: #8CC6EE;
@@ -114,7 +114,9 @@
   /* ---------- Header ---------- */
   header.site{
     position: sticky; top:0; z-index: 40;
+    background: var(--paper);
     background: color-mix(in srgb, var(--paper) 92%, transparent);
+    -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--line);
   }
@@ -374,6 +376,10 @@
   }
   .footer-brand{ display:flex; align-items:center; gap:0.6rem; }
   .footer-brand img{ height:18px; width:auto; opacity:0.85; }
+
+@media (prefers-color-scheme: dark){
+  .btn:not(.btn-ghost), .navlinks .btn:not(.btn-ghost){ color:#0d1013; }
+}
 </style>
 </head>
 <body>
