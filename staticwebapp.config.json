@@ -1,4 +1,16 @@
 {
+  "routes": [
+    {
+      "route": "/book",
+      "redirect": "https://outlook.office.com/bookwithme/user/4984d7b4cd32426f9159dd47daa1a314@eliteoptimization.net/meetingtype/PqFplL1yjU-Ka7-3FzlFwA2?anonymous&ismsaljsauthenabled&ep=mcard",
+      "statusCode": 302
+    },
+    {
+      "route": "/discovery",
+      "redirect": "https://outlook.office.com/bookwithme/user/4984d7b4cd32426f9159dd47daa1a314@eliteoptimization.net/meetingtype/PqFplL1yjU-Ka7-3FzlFwA2?anonymous&ismsaljsauthenabled&ep=mcard",
+      "statusCode": 302
+    }
+  ],
   "navigationFallback": {
     "rewrite": "/index.html"
   },
